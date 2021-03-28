@@ -284,10 +284,7 @@ is_target()
 ; find
 ;
 !f::
-  If is_target()
-    Send %A_ThisHotkey%
-  Else
-    Send ^f
+  Send ^f
   Return
 
 ;
@@ -295,10 +292,7 @@ is_target()
 ; select all
 ;
 !a::
-  If is_target()
-    Send %A_ThisHotkey%
-  Else
-    Send ^a
+  Send ^a
   Return
 
 ;
@@ -306,10 +300,7 @@ is_target()
 ; copy
 ;
 !c::
-  If is_target()
-    Send %A_ThisHotkey%
-  Else
-    Send ^c
+  Send ^c
   Return
 
 ;
@@ -317,10 +308,7 @@ is_target()
 ; cut
 ;
 !x::
-  If is_target()
-    Send %A_ThisHotkey%
-  Else
-    Send ^x
+  Send ^x
   Return
 
 ;
@@ -328,8 +316,5 @@ is_target()
 ; paste
 ;
 !v::
-  If is_target()
-    Send %A_ThisHotkey%
-  Else
-    Send ^v
+  Send ^v
   Return
