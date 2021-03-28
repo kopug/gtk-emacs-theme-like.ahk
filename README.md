@@ -64,30 +64,6 @@ This tiny script allows you to use the gtk-emacs-key-theme like bindings on Wind
 <td>move cursor end of current line selecting chars</td>
 </tr>
 <tr>
-<td>Alt+B</td>
-<td>move cursor one word backward</td>
-</tr>
-<tr>
-<td>Shift+Alt+B</td>
-<td>move cursor one word backward selecting chars</td>
-</tr>
-<tr>
-<td>Alt+F</td>
-<td>move cursor one word forward</td>
-</tr>
-<tr>
-<td>Shift+Alt+F</td>
-<td>move cursor one word forward selecting chars</td>
-</tr>
-<tr>
-<td>Ctrl+W</td>
-<td>cut</td>
-</tr>
-<tr>
-<td>Ctrl+Y</td>
-<td>paste</td>
-</tr>
-<tr>
 <td>Ctrl+K</td>
 <td>delete chars from cursor to end of line</td>
 </tr>
@@ -100,12 +76,24 @@ This tiny script allows you to use the gtk-emacs-key-theme like bindings on Wind
 <td>new line(enter)</td>
 </tr>
 <tr>
-<td>Ctrl+R</td>
+<td>Alt+F</td>
 <td>find</td>
 </tr>
 <tr>
-<td>Ctrl+\</td>
+<td>ALt+A</td>
 <td>select all</td>
+</tr>
+<tr>
+<td>Alt+C</td>
+<td>copy</td>
+</tr>
+<tr>
+<td>Alt+X</td>
+<td>cut</td>
+</tr>
+<tr>
+<td>Alt+V</td>
+<td>paste</td>
 </tr>
 </table>
 

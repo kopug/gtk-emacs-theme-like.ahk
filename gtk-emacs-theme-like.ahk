@@ -25,6 +25,8 @@ is_target()
     Return 1
   IfWinActive,ahk_class Vim ; GVIM
     Return 1
+  IfWinActive,ahk_class CASCADIA_HOSTING_WINDOW_CLASS ; Windows Terminal
+    Return 1
 ;  IfWinActive,ahk_class SWT_Window0 ; Eclipse
 ;    Return 1
 ;   IfWinActive,ahk_class Xming X
@@ -196,34 +198,34 @@ is_target()
 ; <alt>b
 ; move cursor one word backward
 ;
-!b::
-  If is_target()
-    Send %A_ThisHotkey%
-  Else
-    Send ^{Left}
-  Return  
+;!b::
+;  If is_target()
+;    Send %A_ThisHotkey%
+;  Else
+;    Send ^{Left}
+;  Return  
 
 ;
 ; <shift><alt>b
 ; move cursor one word backward selecting chars
 ;
-+!b::
-  If is_target()
-    Send %A_ThisHotkey%
-  Else
-    Send +^{Left}
-  Return  
+;+!b::
+;  If is_target()
+;    Send %A_ThisHotkey%
+;  Else
+;    Send +^{Left}
+;  Return  
 
 ;
 ; <alt>f
 ; move cursor one word forward
 ;
-!f::
-  If is_target()
-    Send %A_ThisHotkey%
-  Else
-    Send ^{Right}
-  Return  
+;!f::
+;  If is_target()
+;    Send %A_ThisHotkey%
+;  Else
+;    Send ^{Right}
+;  Return  
 
 ;
 ; <shift><alt>f
@@ -234,28 +236,6 @@ is_target()
     Send %A_ThisHotkey%
   Else
     Send +^{Right}
-  Return
-
-;
-; <ctrl>w
-; cut
-;
-^w::
-  If is_target()
-    Send %A_ThisHotkey%
-  Else
-    Send ^x
-  Return
-
-;
-; <ctrl>y
-; paste
-;
-^y::
-  If is_target()
-    Send %A_ThisHotkey%
-  Else
-    Send ^v
   Return
 
 ;
@@ -300,10 +280,10 @@ is_target()
   Return
 
 ;
-; <ctrl>r
+; <alt>f
 ; find
 ;
-^r::
+!f::
   If is_target()
     Send %A_ThisHotkey%
   Else
@@ -311,12 +291,45 @@ is_target()
   Return
 
 ;
-; <ctrl>\
+; <alt>a
 ; select all
 ;
-^\::
+!a::
   If is_target()
     Send %A_ThisHotkey%
   Else
     Send ^a
+  Return
+
+;
+; <alt>c
+; copy
+;
+!c::
+  If is_target()
+    Send %A_ThisHotkey%
+  Else
+    Send ^c
+  Return
+
+;
+; <alt>x
+; cut
+;
+!x::
+  If is_target()
+    Send %A_ThisHotkey%
+  Else
+    Send ^x
+  Return
+
+;
+; <alt>v
+; paste
+;
+!v::
+  If is_target()
+    Send %A_ThisHotkey%
+  Else
+    Send ^v
   Return
