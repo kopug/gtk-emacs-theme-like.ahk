@@ -12,31 +12,8 @@ SetKeyDelay 0
 ; (Please comment out applications you don't use)
 is_target()
 {
-  IfWinActive,ahk_class ConsoleWindowClass ; Cygwin
-    Return 1 
-  IfWinActive,ahk_class MEADOW ; Meadow
-    Return 1 
-  IfWinActive,ahk_class cygwin/x X rl-xterm-XTerm-0
-    Return 1
-  IfWinActive,ahk_class MozillaUIWindowClass ; keysnail on Firefox
-    Return 1
-  ; Avoid VMwareUnity with AutoHotkey
-  IfWinActive,ahk_class VMwareUnityHostWndClass
-    Return 1
-  IfWinActive,ahk_class Vim ; GVIM
-    Return 1
   IfWinActive,ahk_class CASCADIA_HOSTING_WINDOW_CLASS ; Windows Terminal
     Return 1
-;  IfWinActive,ahk_class SWT_Window0 ; Eclipse
-;    Return 1
-;   IfWinActive,ahk_class Xming X
-;     Return 1
-;   IfWinActive,ahk_class SunAwtFrame
-;     Return 1
-;   IfWinActive,ahk_class Emacs ; NTEmacs
-;     Return 1  
-;   IfWinActive,ahk_class XEmacs ; XEmacs on Cygwin
-;     Return 1
   Return 0
 }
 
@@ -316,5 +293,8 @@ is_target()
 ; paste
 ;
 !v::
-  Send ^v
+  If is_target()
+    Send +^v
+  Else
+    Send ^v
   Return
