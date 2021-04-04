@@ -14,6 +14,8 @@ is_target()
 {
   IfWinActive,ahk_class CASCADIA_HOSTING_WINDOW_CLASS ; Windows Terminal
     Return 1
+  IfWinActive,ahk_class FFXIVGAME ; Final Fantasy XIV
+    Return 1
   Return 0
 }
 
