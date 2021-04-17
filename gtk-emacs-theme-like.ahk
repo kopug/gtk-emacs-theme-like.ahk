@@ -300,3 +300,27 @@ is_target()
   Else
     Send ^v
   Return
+
+;
+; <alt>n
+; new window
+;
+!n::
+  Send ^n
+  Return
+
+;
+; <alt>t
+; new tab
+;
+!t::
+  Send ^t
+  Return
+
+;
+; <alt>w
+; close tab
+;
+!w::
+  Send ^w
+  Return
