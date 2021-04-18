@@ -332,3 +332,11 @@ is_target()
 !r::
   Send ^r
   Return
+
+; 
+; <alt>l
+; cullent cursor url bar
+;
+!l::
+  Send ^l
+  Return
