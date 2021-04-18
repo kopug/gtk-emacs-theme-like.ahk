@@ -324,3 +324,11 @@ is_target()
 !w::
   Send ^w
   Return
+
+;
+; <alt>r
+; reload
+;
+!r::
+  Send ^r
+  Return
